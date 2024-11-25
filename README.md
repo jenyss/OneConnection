@@ -18,6 +18,7 @@ This approach ensures robust, adaptive handling of user queries, leveraging the 
 
 ## Intallation Guide
 
+```
 ONECONNECTION
 │
 ├── Public
@@ -33,6 +34,7 @@ ONECONNECTION
 │   └── requirements.txt           # Dependencies for the backend
 │
 └── oneConnection.env              # Environment variables file
+```
 
 Follow the steps below to set up and run the OneConnection application on your local environment.
 
@@ -65,18 +67,16 @@ brew reinstall python
 <b>2. Create a Virtual Environment</b>
 Navigate to the backend folder and create a virtual environment:
 <code>
-cd <BACKEND_FOLDER>
+cd backend
 python3 -m venv venv
 </code>
 
 <b>3. Activate the Virtual Environment</b>
 Activate the virtual environment:
-
 * On macOS/Linux
 <code>
 source venv/bin/activate
 </code>
-
 * On Windows (Command Prompt)
 <code>
 venv\Scripts\activate
@@ -104,7 +104,6 @@ There is no need for additional setup for the frontend unless changes or additio
 
 <b>1. Start the Backend</b>
 Run the Flask application from the <code>backend</code> folder!
-
 <code>
 python3 app.py
 </code>
