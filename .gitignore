@@ -1,0 +1,5 @@
+oneConnection.env
+oneConnection_old.env
+.DS_Store
+venv
+**/__pycache__

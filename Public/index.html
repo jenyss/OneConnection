@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Connection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fixed-top">
+        <div class="centered-content">
+            <img id="headerImage" src="zh.png" alt="Header Image" style="width: 80px; height: auto;" class="left-content">
+            <div class="row">
+                <textarea id="userInput" placeholder="Enter your query..."></textarea>
+                <button id="sendButton">Send</button>
+                <!-- <button id="testButton">Test OpenAI</button> Added test button -->
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollable-output">
+        <!-- Display response here -->
+        <div id="response" style="margin-top: 20px;"></div>
+    </div>
+
+    <script type="module">
+
+
+        async function processInput() {
+            const userInput = document.getElementById("userInput").value;
+            const responseDiv = document.getElementById("response");
+
+            responseDiv.innerHTML = "Processing your request...";
+
+            try {
+                const response = await fetch('http://localhost:3001/process', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ prompt: userInput })
+                });
+
+                const data = await response.json();
+                console.log("Received response:", data);
+
+                if (data.status === 'Success' && data.response && data.code) {
+                    responseDiv.innerHTML = `<pre>${data.response}</pre><pre>${data.code}</pre>`;
+                } else if (data.status === 'Success') {
+                    responseDiv.innerHTML = "No logs were generated.";
+                } else {
+                    responseDiv.innerHTML = `<span style="color: red;">Error: ${data.response}</span>`;
+                }
+            } catch (error) {
+                responseDiv.innerHTML = "An error occurred while processing your request.";
+                console.error("Error:", error);
+            }
+        }
+
+
+
+        async function testOpenAI() {
+            const userInput = document.getElementById("userInput").value;
+            const responseDiv = document.getElementById("response");
+
+            responseDiv.innerHTML = "Testing OpenAI connection...";
+
+            try {
+                const response = await fetch('http://localhost:3001/test_openai', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'text/plain' // Send plain text
+                    },
+                    body: userInput
+                });
+
+                const data = await response.json();
+                responseDiv.innerHTML = data.response;  // Display OpenAI response
+            } catch (error) {
+                responseDiv.innerHTML = "An error occurred while testing OpenAI.";
+                console.error("Error:", error);
+            }
+        }
+
+        // Add event listeners
+        document.getElementById("sendButton").addEventListener("click", processInput);
+        // document.getElementById("testButton").addEventListener("click", testOpenAI);
+    </script>
+</body>
+</html>

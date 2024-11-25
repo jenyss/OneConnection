@@ -1,0 +1,131 @@
+body {
+    background-color: #302f2f;
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content at the top */
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent the body from scrolling */
+    width: 100vw; /* Ensure body does not include scrollbar width */
+    height: 100vh;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#userInput {
+    width: 650px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: #555454;
+    color: #f0f0f0;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #555454;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #06C2AA;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a3b3f; /* raspberry red #EF1548 */
+}
+
+#response {
+    margin-top: 20px;
+    width: 80%;
+    background-color: #302f2f;
+    padding: 15px;
+    border-radius: 5px;
+    color: #f0f0f0;
+    overflow-y: auto; /* Allow vertical scrolling */
+    height: calc(100vh - 200px); /* Adjust height to make room for header */
+    width: 100vw; /* Ensure body does not include scrollbar width */
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* New styles */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #302f2f;
+    z-index: 1000; /* Make sure it stays on top */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.scrollable-output {
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 150px; /* Space for the fixed header */
+    width: 100%; /* Use the full width of the parent container */
+    max-width: 100%; /* Prevent overflow beyond the viewport */
+    height: calc(100vh - 150px); /* Account for header height */
+    box-sizing: border-box; /* Include padding and borders in width/height */
+    scrollbar-width: thin; /* Custom scrollbar width for Firefox */
+    scrollbar-color: #555454 #302f2f; /* Custom scrollbar colors for Firefox */
+    position: relative; /* Align it relative to the page */
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+.scrollable-output::-webkit-scrollbar {
+    width: 8px; /* Custom scrollbar width */
+}
+
+.scrollable-output::-webkit-scrollbar-thumb {
+    background-color: #555454; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded edges for smooth design */
+}
+
+.scrollable-output::-webkit-scrollbar-track {
+    background-color: #302f2f; /* Scrollbar track color matches background */
+}
+
+/* Ensure image, input, and button are centered */
+.centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#headerImage {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#headerImage {
+    width: 50px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+    border-radius: 5px; /* Rounds the corners */
+    overflow: hidden; /* Ensures image fits within the rounded corners */
+}
