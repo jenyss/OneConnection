@@ -56,7 +56,7 @@ cd <PROJECT_FOLDER>
 
 ### Step 2: Backend Setup (Flask Application)
 
-<b>1. Update System Packages (macOS-specific)</b>
+<b>1. Update System Packages (macOS-specific)</b><br>
 If you are on macOS, update brew and ensure Python and OpenSSL are correctly installed:
 <code>
 brew update
@@ -64,31 +64,31 @@ brew install openssl
 brew reinstall python
 </code>
 
-<b>2. Create a Virtual Environment</b>
+<b>2. Create a Virtual Environment</b><br>
 Navigate to the backend folder and create a virtual environment:
 <code>
 cd backend
 python3 -m venv venv
 </code>
 
-<b>3. Activate the Virtual Environment</b>
+<b>3. Activate the Virtual Environment</b><br>
 Activate the virtual environment:
 * On macOS/Linux
-<code>
-source venv/bin/activate
-</code>
+    <code>
+    source venv/bin/activate
+    </code>
 * On Windows (Command Prompt)
-<code>
-venv\Scripts\activate
-</code>
+    <code>
+    venv\Scripts\activate
+    </code>
 
-<b>4. Install Backend Dependencies</b>
+<b>4. Install Backend Dependencies</b><br>
 Install the required dependencies listed in <b>requirements.txt</b>
 <code>
 pip install -r requirements.txt
 </code>
 
-<b>5. Configure Environment Variables</b>
+<b>5. Configure Environment Variables</b><br>
 Create <code>oneConnection.env</code> in your root project folder and add your environment-specific variables (e.g., API keys, tokens).
 
 ### Step 3: Frontend Setup (HTML/CSS)
@@ -102,7 +102,7 @@ There is no need for additional setup for the frontend unless changes or additio
 
 ### Step 4: Run the Application
 
-<b>1. Start the Backend</b>
+<b>1. Start the Backend</b><br>
 Run the Flask application from the <code>backend</code> folder!
 <code>
 python3 app.py
@@ -113,7 +113,7 @@ Alternatively, you can use:
 python3 app.py
 </code>
 
-<b>2. Access the Application</b>
+<b>2. Access the Application</b><br>
 Once the backend starts, you can access the application at the port configured in <b>app.py</b> e.g. if:
 <code>
 if __name__ == '__main__':
