@@ -91,6 +91,9 @@ pip install -r requirements.txt
 <b>5. Configure Environment Variables</b><br>
 Create <code>oneConnection.env</code> in your root project folder and add your environment-specific variables (e.g., API keys, tokens).
 
+<b>5. Set-up LLM Connection</b><br>
+TODO: in chat_helpers.py
+
 ### Step 3: Frontend Setup (HTML/CSS)
 
 The static frontend files are located in the <code>Public</code> folder:
@@ -110,7 +113,7 @@ python3 app.py
 
 Alternatively, you can use:
 <code>
-python3 app.py
+python app.py
 </code>
 
 <b>2. Access the Application</b><br>
