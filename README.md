@@ -91,7 +91,7 @@ pip install -r requirements.txt
 <b>5. Configure Environment Variables</b><br>
 Create <code>oneConnection.env</code> in your root project folder and add your environment-specific variables (e.g., API keys, tokens).
 
-<b>5. Set-up LLM Connection</b><br>
+<b>6. Set-up LLM Connection</b><br>
 TODO: in chat_helpers.py
 
 ### Step 3: Frontend Setup (HTML/CSS)
