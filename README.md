@@ -93,7 +93,7 @@ This is a crucial step: you need to define all variables required for the OneCon
 Create <code>oneConnection.env</code> in your root project folder and add your environment-specific variables (e.g., API keys, tokens).
 
 <b>6. Set-up Large Language Model Connection</b><br>
-OneConnection currently supports connectivity with OpenAI models, but you can easily add support for other models. The LLM in use is defined in chat_helpers.py. There are helper functions (currently commented out) in (TODO: list files) that you can use to test your LLM connection. Simply uncomment them to test and ensure your setup is working correctly. An additional button will appear in the User Interface.
+OneConnection currently supports connectivity with OpenAI models, but you can easily add support for other models. The LLM in use is configured in chat_helpers.py. There are helper functions (currently commented out) in (TODO: list files) that you can use to test your LLM connection. Simply uncomment them to test and ensure your LLM setup is working correctly. An additional button will appear in the User Interface.
 
 ### Step 3: Frontend Setup (HTML/CSS)
 
@@ -102,7 +102,7 @@ The static frontend files are located in the <code>Public</code> folder:
 * index.html: The main UI.
 * style.css: Contains all styles for the application.
 
-There is no need for additional setup for the frontend unless changes or additional functionality are required.
+There is no need for additional setup for the frontend unless you would like to change something or add new functionality.
 
 ### Step 4: Run the Application
 
