@@ -97,10 +97,10 @@ Create <code>oneConnection.env</code> in your root project folder and add your v
 <b>6. Set-up Large Language Model Connection</b><br>
 OneConnection currently supports connectivity with OpenAI models, but you can easily add support for other models. The LLM in use is configured in chat_helpers.py. There are helper functions (currently commented out) that you can use to test your LLM connection. Simply uncomment them to test and ensure your LLM setup is working correctly. An additional button will appear in the User Interface.
 
-<b>index.html</b> Uncomment the button "Test OpenAI" and the event listener "testOpenAI".
-<b>app.py</b> No changes required, <code>/test_openai</code> passes forward to <code>executor.py</code>.
-<b>executor.py</b> No changes required, <code>test_completion<code> calls <code>test_openai_connection</code> in <code>chat_helpers.py</code>.
-<b>chat_helpers.py</b> No changes required, <code>test_openai_connection</code> passes the prompt to the model and returns its reposne. 
+* <b>index.html</b> Uncomment the button "Test OpenAI" and the event listener "testOpenAI".
+* <b>app.py</b> No changes required, <code>/test_openai</code> passes forward to <code>executor.py</code>.
+* <b>executor.py</b> No changes required, <code>test_completion</code> calls <code>test_openai_connection</code> in <code>chat_helpers.py</code>.
+* <b>chat_helpers.py</b> No changes required, <code>test_openai_connection</code> passes the prompt to the model and returns its reposne. 
 
 ### Step 3: Frontend Setup (HTML/CSS)
 
