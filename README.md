@@ -42,7 +42,7 @@ Follow the steps below to set up and run the OneConnection application on your l
 Before installing, ensure you have the following:
 
 * <b>Python 3.8+</b> installed on your system.
-* <b>Node.js</b> (if additional frontend functionality is required in the future).
+* <b>Access to a Large Language Model API</b> for generating Python code.
 * A package manager like pip for Python dependencies.
 * <b>Brew</b> (if you are on macOS) for managing system dependencies.
 
@@ -65,7 +65,7 @@ brew reinstall python
 </code>
 
 <b>2. Create a Virtual Environment</b><br>
-Navigate to the backend folder and create a virtual environment:
+Navigate to the project <b>backend</b> folder and create a virtual environment:
 <code>
 cd backend
 python3 -m venv venv
@@ -89,10 +89,11 @@ pip install -r requirements.txt
 </code>
 
 <b>5. Configure Environment Variables</b><br>
+This is a crucial step: you need to define all variables required for the OneConnection application to successfully execute the generated Python code and connect to the respective tool. Ensure all API keys and other necessary variables are included in this file so they can be properly mapped and utilized in your Python code.
 Create <code>oneConnection.env</code> in your root project folder and add your environment-specific variables (e.g., API keys, tokens).
 
-<b>6. Set-up LLM Connection</b><br>
-TODO: in chat_helpers.py
+<b>6. Set-up Large Language Model Connection</b><br>
+TODO: OneConnection currently supports connectivity with OpenAI models, but you can easily add support for other models. The LLM in use is defined in chat_helpers.py. There are helper functions (currently commented out) in (list files) that you can use to test your LLM connection. Simply uncomment them to ensure your setup is working correctly. An additional button will appear in the User Interface.
 
 ### Step 3: Frontend Setup (HTML/CSS)
 
@@ -123,7 +124,7 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3001)
 </code>
 
-then
+then you application is available at:
 <code>
 http://localhost:3001/
 </code>
