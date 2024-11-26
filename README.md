@@ -13,7 +13,7 @@ The execution output is stored in a response_variable for debugging and further 
 
 ### Error Handling and Code Refinement
 If the code fails to execute (e.g., due to errors), the application sends the user input, generated code, and execution response back to the LLM.
-The LLM analyzes the errors and attempts to fix the code. This process is repeated up to 3 times until a working solution is produced.
+The LLM analyzes the errors and attempts to fix the code. This process is repeated up to 3 times and stops earlier if a working solution is produced before the 3rd attempt.
 This approach ensures robust, adaptive handling of user queries, leveraging the LLM’s reasoning capabilities to improve code accuracy and execution success.
 
 ## Intallation Guide
@@ -93,7 +93,7 @@ This is a crucial step: you need to define all variables required for the OneCon
 Create <code>oneConnection.env</code> in your root project folder and add your environment-specific variables (e.g., API keys, tokens).
 
 <b>6. Set-up Large Language Model Connection</b><br>
-TODO: OneConnection currently supports connectivity with OpenAI models, but you can easily add support for other models. The LLM in use is defined in chat_helpers.py. There are helper functions (currently commented out) in (list files) that you can use to test your LLM connection. Simply uncomment them to ensure your setup is working correctly. An additional button will appear in the User Interface.
+OneConnection currently supports connectivity with OpenAI models, but you can easily add support for other models. The LLM in use is defined in chat_helpers.py. There are helper functions (currently commented out) in (TODO: list files) that you can use to test your LLM connection. Simply uncomment them to test and ensure your setup is working correctly. An additional button will appear in the User Interface.
 
 ### Step 3: Frontend Setup (HTML/CSS)
 
