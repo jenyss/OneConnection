@@ -4,6 +4,8 @@ This application processes free-form user queries and uses a Large Language Mode
 
 <b>Example free-form request:</b> Connect to AWS and get my billing statement for November 2024.
 
+If you have any questions or would like to collaborate, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/jenya-stoeva-60477249/). You're more than welcome!
+
 ## Key Features
 
 ### Dynamic Code Generation
@@ -95,7 +97,7 @@ This is a crucial step: you need to define all variables required for the OneCon
 Create <code>oneConnection.env</code> in your root project folder and add your variables (e.g., OPENAI_API_KEY, AWS_SECRET_ACCESS_KEY, ...).
 
 <b>6. Set-up Large Language Model Connection</b><br>
-OneConnection currently supports connectivity with OpenAI models, but you can easily add support for other models. The LLM in use is configured in chat_helpers.py. There are helper functions (currently commented out) that you can use to test your LLM connection. Simply uncomment them to test and ensure your LLM setup is working correctly. An additional button will appear in the User Interface.
+OneConnection currently supports connectivity with OpenAI models, but you can easily add support for other models. The LLM in use is configured in <code>chat_helpers.py</code>. There are helper functions (currently commented out) that you can use to test your LLM connection. Simply uncomment them to test and ensure your LLM setup is working correctly. An additional button will appear in the User Interface.
 
 * <b>index.html</b> Uncomment the button "Test OpenAI" and the event listener "testOpenAI".
 * <b>app.py</b> No changes required, <code>/test_openai</code> passes forward to <code>executor.py</code>.
