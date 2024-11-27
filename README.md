@@ -20,6 +20,8 @@ If the code fails to execute (e.g., due to errors), the application sends the us
 The LLM analyzes the errors and attempts to fix the code. This process is repeated up to 3 times and stops earlier if a working solution is produced before the 3rd attempt.
 This approach ensures robust, adaptive handling of user queries, leveraging the LLM’s reasoning capabilities to improve code accuracy and execution success.
 
+![OneConnection flow](OneConnection_flow_diagram.png "OneConnection flow")
+
 ## Intallation Guide
 
 ```
