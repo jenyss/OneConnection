@@ -47,7 +47,7 @@ Follow the steps below to set up and run the OneConnection application on your l
 <b>Prerequisites</b>
 Before installing, ensure you have the following:
 
-* <b>Python 3.8+</b> installed on your system.
+* <b>At least Python 3.8+</b> installed on your system.
 * <b>Access to a Large Language Model API</b> for generating Python code.
 * A package manager like pip for Python dependencies.
 * <b>Brew</b> (if you are on macOS) for managing system dependencies.
